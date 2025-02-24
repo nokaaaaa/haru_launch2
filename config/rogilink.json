@@ -1,0 +1,42 @@
+{
+    "device_id": 0,
+    "reception_messages": [
+        {
+            "id": 1,
+            "name": "kokuban",
+            "type": "bool"
+        },
+        {
+            "id": 2,
+            "name": "ball",
+            "type": "bool"
+        },
+        {
+            "id": 3,
+            "name": "z_down",
+            "type": "bool"
+        },
+        {
+            "id": 4,
+            "name": "seiton",
+            "type": "bool"
+        }
+    ],
+    "transmission_messages": [
+        {
+            "id": 1,
+            "name": "kokuban",
+            "type": "bool"
+        },
+        {
+            "id": 2,
+            "name": "ball",
+            "type": "bool"
+        },
+        {
+            "id": 3,
+            "name": "z_down",
+            "type": "bool"
+        }
+    ]
+}
