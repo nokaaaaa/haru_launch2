@@ -10,6 +10,10 @@ pid:
     max_angular_velocity: 0.1
     arrival_threshold: 0.05
     theta_threshold: 0.05
-    wait_time: 1
+    kokuban_t : 1000 #ミリ秒
+    turn_t : 100
+    launcher_1_t : 2000
+    ball_t : 1000
+    launcher_2_t : 100000
     red_csv: /home/yuki/ros2_ws/src/uni_tes/path/red.csv
     blue_csv: /home/yuki/ros2_ws/src/uni_tes/path/blue.csv
