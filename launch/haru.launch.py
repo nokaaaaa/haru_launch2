@@ -26,6 +26,9 @@ def generate_launch_description():
     pid_config_path = os.path.join(
         os.path.dirname(os.path.realpath(__file__)), "..", "config", "pid_config.yaml"
     )
+    pure_config_path = os.path.join(
+        os.path.dirname(os.path.realpath(__file__)), "..", "config", "pure_config.yaml"
+    )
 
     od_config_path = os.path.join(
         os.path.dirname(os.path.realpath(__file__)), "..", "config", "drive.json"
@@ -45,12 +48,22 @@ def generate_launch_description():
     )
     
     # pid ノード
+    """
     pid_node = Node(
         package="haru_pid",
         executable="pid",
         name="pid",
         output="screen",
         parameters=[pid_config_path, {'field_color': LaunchConfiguration('field_color')}]
+    )
+    """
+
+    pure_node = Node(
+        package="haru_pure",
+        executable="pure",
+        name="pure",
+        output="screen",
+        parameters=[pure_config_path, {'field_color': LaunchConfiguration('field_color')}]
     )
 
     sick_scan_launch = IncludeLaunchDescription(
@@ -109,7 +122,8 @@ def generate_launch_description():
 
 
     ld.add_action(hransac_node)
-    ld.add_action(pid_node)
+   #ld.add_action(pid_node)
+    ld.add_action(pure_node)
     ld.add_action(gui_node)
     ld.add_action(od_node)
     ld.add_action(sick_scan_launch)
